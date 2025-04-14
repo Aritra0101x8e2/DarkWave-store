@@ -1,0 +1,73 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 212 33% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 210 33% 15%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 210 33% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 100% 40%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 30% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 20% 30%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 196 80% 50%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 30% 25%;
+    --input: 210 30% 25%;
+    --ring: 210 60% 50%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-darkwave-dark text-foreground antialiased;
+    background-image: radial-gradient(circle at 50% 0%, rgba(10, 66, 128, 0.2) 0%, rgba(10, 25, 41, 0) 70%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+
+  .card-glow {
+    box-shadow: 0 0 15px rgba(30, 136, 229, 0.2);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .card-glow:hover {
+    box-shadow: 0 0 25px rgba(63, 201, 255, 0.4);
+  }
+
+  .grid-pattern {
+    background-image: 
+      linear-gradient(rgba(16, 44, 68, 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16, 44, 68, 0.3) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: center center;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-darkwave-cyan to-darkwave-glow;
+  }
+}
